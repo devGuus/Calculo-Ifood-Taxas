@@ -1,0 +1,136 @@
+/* === ESTILO GERAL === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background-color: #f8e6c9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    overflow-x: hidden;
+}
+
+/* === EFEITOS DE FUNDO COM COOKIES === */
+
+.cookie-bg-top,
+.cookie-bg-bottom {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    background-image: url('https://i.imgur.com/sJtq1Nd.png');
+    background-size: cover;
+    opacity: 0.18;
+    z-index: -1;
+}
+
+.cookie-bg-top {
+    top: -30px;
+    left: -30px;
+}
+
+.cookie-bg-bottom {
+    bottom: -30px;
+    right: -30px;
+}
+
+/* === CARD PRINCIPAL === */
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: #fce3b9;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    border: 4px dashed #a87744;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.18);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === TÍTULOS === */
+
+h1 {
+    color: #5A3C21;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #5A3C21;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* === INPUTS === */
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: #f9d59b;
+    border: 2px solid #a87744;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #4b2e15;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    background-color: #f7cb8d;
+    transform: scale(1.02);
+}
+
+/* === BOTÃO === */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(#b88654, #8c5c35);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.08);
+}
+
+/* === RESULTADO === */
+
+#resultado {
+    margin-top: 18px;
+    font-size: 17px;
+    color: #4b2e15;
+    font-weight: bold;
+    white-space: pre-line;
+}
+
+/* === RESPONSIVIDADE === */
+
+@media (max-width: 390px) {
+    .container {
+        padding: 22px;
+        border-width: 3px;
+    }
+    h1 { font-size: 22px; }
+}
